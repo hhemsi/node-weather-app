@@ -120,6 +120,9 @@ app.get('*', (req, res)=>{
         errorMessage:'Page not found'
     })})
 
-app.listen(3000, ()=>{
-    console.log("server starting on 3000")
+
+const port = process.env.PORT || 3000 // default to 3000 if it does not exist
+
+app.listen(port, ()=>{
+    console.log("server starting on "+ port)
 })
